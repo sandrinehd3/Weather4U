@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/eed35ebf68.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chewy&family=Merienda+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <h1> ☀️ WEATHER 4 U ☀️</h1>
+        <div class="city-form">
+            <form id="search-form">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" id="search-text-input" placeholder="Enter city" autocomplete="off"
+                            autofocus="on" />
+                        <input id="search-button" type="submit" value="GO" />
+                    </div>
+                </div>
+            </form>
+            <button id=celcius-button><strong>°C</strong></button>
+            <button id=fahrenheit-button><strong>°F</strong></button>
+        </div>
+        <div class="city">
+            <span id="display-city"> Brooklyn </span>
+        </div>
+
+        <h2>
+            Sunday, June 14, 2020
+        </h2>
+
+        <div class="current-day">
+
+            <div id="temperature"> <strong>70</strong><strong>°</strong>
+                <span id="now-emoji"> 🌤 </span>
+            </div>
+            <p id="temp-description"> Partly Cloudy </p>
+
+            <div class="day-temp">
+                High 77° | Low 67°
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <img src="sunrise.png" alt="sunrise" class="sunrise">
+                </div>
+
+                <div class="col">
+                    <img src="sunset.png" alt="sunset" class="sunset">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    5:30AM
+                </div>
+
+                <div class="col">
+                    8:44PM
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-4"> HUMIDITY <div class="humidity"> 5% </div>
+                </div>
+                <div class="col-4"> WINDSPEED <div class="windspeed"> 36 mph</div>
+                </div>
+                <div class="col-4"> PRESSURE <div class="pressure"> 5 </div>
+                </div>
+            </div>
+
+            <hr>
+            <table>
+                <tr>
+                    <th>MON <i class="fas fa-cloud-sun"></i> <br> 65° | 75° </th>
+                    <th>TUE<i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
+                    <th>WED <i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
+                    <th>THU <i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
+                    <th>FRI <i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
+                    <th>SAT <i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
+        </div>
+
+        </table>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>

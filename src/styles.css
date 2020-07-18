@@ -1,0 +1,161 @@
+body {
+  display: 0 auto;;
+  margin-top: 20px;
+  padding-left: px;
+  padding-top: 40px;
+  max-width: 900px;
+}
+.container {
+  width: 450px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  border: 2px solid green;
+  border-width: 400;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  color: #ffbd69;
+}
+button {
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #f4f6ff;
+  color: #127681;
+  padding: 10px 10px;
+}
+#celcius-button {
+  position: relative;
+  top:-125px;
+  left:350px
+}
+#fahrenheit-button {
+  position: relative;
+  top:-67px;
+  left:300px
+}
+
+input[type=text] {
+  position: relative;
+  top:25px;
+  left:200;
+  background-color:blanchedalmond ;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 15px 15px;
+  width: 250px;
+  border-radius: 5px;
+  font-size: 20px;
+  
+}
+input[type=button], input[type=submit], input[type=reset] {
+  position: relative;
+  left:200px;
+  top: -40px;
+  background-color: rgb(78, 156, 78);
+  color: blanchedalmond;
+  padding: 17px 17px;
+  cursor: pointer;
+  margin-left: -100;
+  font-size:20px;
+  font-weight: bold;
+} 
+.city {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+hr {
+  border: 30px solid #127681;
+  background-color: #127681;
+  color: #127681;
+  border-width: 1px;
+}
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  color: #f4f6ff;
+}
+#now-emoji {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 25px;
+  font-size: 70px;
+}
+#temperature {
+  
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 60px;
+}
+#temp-description {
+  font-family: 'Merienda One';
+  text-transform: capitalize;
+  font-size: 25px;
+}
+.fas {
+  size: 40px;
+  color: #dfbf31;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-family: 'Merienda One';
+  color: #f4f6ff;
+}
+h1 {
+  font-size: 40px;
+  font-weight: bold
+  padding: 30px;
+}
+h2 {
+  font-size: 20px;
+  text-color: #f4f6ff
+}
+.day-temp {
+  font-size: 20px;
+  text-align: center;
+}
+img {
+  width: 75px;
+  height: 50px;
+  background-color: #f4f6ff;
+  padding: 5px 5px;
+  margin: 5px 5px;
+  border-radius: 5px;
+}
+.sunrise {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+}
+.sunset {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+}
+.row {
+  text-align: center;
+  font-style: bolder;
+  font-size: 15px;
+}
+table {
+  width: 425px;
+  color: #f4f6ff;
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+th {
+  height: 30px;
+  width: 5px;
+  text-align: center;
+}
+td {
+  height: 4px;
+  vertical-align: bottom;
+}
