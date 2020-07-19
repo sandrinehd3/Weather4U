@@ -7,7 +7,7 @@ body {
 }
 .container {
   width: 450px;
-  margin: 0 auto;
+  margin: auto;
   padding: 30px 20px;
   border: 2px solid green;
   border-width: 400;
