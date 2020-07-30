@@ -64,8 +64,19 @@ function displayTemperature(response) {
   );
 }
 
-let apiKey = "bdd263b59088bdadbee5570c95e7c44e";
-let city = "queens";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=imperial`;
+function search(city) {
+  let apiKey = "bdd263b59088bdadbee5570c95e7c44e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleInput(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-text-input");
+  search(cityInputElement.value);
+}
+
+search("lisbon");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleInput);
