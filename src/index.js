@@ -42,7 +42,6 @@ if (minutes < 10) {
 h2.innerHTML = `${day},  ${month} ${date}, ${year}  <br> ${hour}:${minutes}`;
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#temp-description");
@@ -50,6 +49,7 @@ function displayTemperature(response) {
   let lowElement = document.querySelector("#lowtemp");
   let sunriseElement = document.querySelector("#sunrise");
   let sunsetElement = document.querySelector("#sunset");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -58,10 +58,14 @@ function displayTemperature(response) {
   lowElement.innerHTML = Math.round(response.data.main.temp_min);
   sunriseElement.innerHTML = response.data.sys.sunrise;
   sunsetElement.innerHTML = response.data.sys.sunset;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "bdd263b59088bdadbee5570c95e7c44e";
-let city = "New York";
+let city = "queens";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=imperial`;
 
 axios.get(apiUrl).then(displayTemperature);
