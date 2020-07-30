@@ -44,22 +44,34 @@ h2.innerHTML = `${day},  ${month} ${date}, ${year}  <br> ${hour}:${minutes}`;
 // temp and city
 
 function showTemperature(response) {
-  document.querySelector("#search-text-input").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+  event.preventDefault();
+  console.log(response.data);
+
+  let tempElement = document.querySelector("#temperature");
+  let city = document.querySelector("#search-text-input");
+  let displayCity = document.querySelector("#display-city");
+  let humidityElement = document.querySelector("#humidity");
+  let windspeedElement = document.querySelector("#windspeed");
+  let pressureElement = document.querySelector("#pressure");
+  let descriptionElement = document.querySelector("#temp-description");
+  let iconElement = document.querySelector("#description-icon");
+
+  tempElement.innerHTML = Math.round(response.data.main.temp);
+  city.innerHTML = response.data.name;
+  displayCity.innerHTML = `${city.value}`;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windspeedElement.innerHTML = Math.round(response.data.wind.speed);
+  pressureElement.innerHTML = response.data.main.pressure;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
-function showCity(event) {
-  event.preventDefault();
-  let city = document.querySelector("#search-text-input");
-  let displaycity = document.querySelector("#display-city");
-  let apiKey = `bdd263b59088bdadbee5570c95e7c44e`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=imperial
+let apiKey = `bdd263b59088bdadbee5570c95e7c44e`;
+let city = "Kingston";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial
   `;
-  displaycity.innerHTML = `${city.value}`;
-  axios.get(apiUrl).then(showTemperature);
-}
 
-let showWeather = document.querySelector("#search-form");
-showWeather.addEventListener("submit", showCity);
+axios.get(apiUrl).then(showTemperature);

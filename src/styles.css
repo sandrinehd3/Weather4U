@@ -86,7 +86,7 @@ h2 {
   font-family: "Merienda One";
   font-size: 25px;
 }
-#now-emoji {
+#icon {
   text-align: center;
   margin-left: 10px;
   margin-right: 25px;
@@ -101,8 +101,8 @@ h2 {
   color: #f4f6ff;
   font-size: 20px;
 }
-#high-temp,
-#low-temp,
+#hightemp,
+#lowtemp,
 #high-temp-label,
 #low-temp-label,
 #low-high-divider {
