@@ -100,6 +100,7 @@ h2 {
   font-family: "Merienda One";
   color: #f4f6ff;
   font-size: 20px;
+  text-transform: capitalize;
 }
 #hightemp,
 #lowtemp,
