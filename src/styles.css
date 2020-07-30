@@ -58,7 +58,7 @@ input[type="reset"] {
   font-size: 20px;
   font-weight: bold;
 }
-.city {
+#city {
   margin-top: 0px;
   margin-bottom: 5px;
   text-transform: uppercase;

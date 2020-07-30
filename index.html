@@ -21,21 +21,26 @@
             <form id="search-form">
                 <div class="row">
                     <div class="col-6">
-                        <input type="text" id="search-text-input" placeholder="Enter city" autocomplete="off"
-                            autofocus="on" />
-                        <input id="search-button" type="submit" value="GO" />
+                        <input  type="search" 
+                                id="search-text-input" 
+                                placeholder="Enter city" 
+                                class= "form-control"
+                                autocomplete="off"
+                                autofocus="on" />
+
+                        <input  id="search-button" 
+                                type="submit" 
+                                value="GO" />
                     </div>
                 </div>
             </form>
             <button id=celcius-button><strong>°C</strong></button>
             <button id=fahrenheit-button><strong>°F</strong></button>
         </div>
-        <div class="city">
-            <span id="display-city"> Brooklyn </span>
-        </div>
+        <div id="city"> Brooklyn </div>
 
       
-           <h2> Sunday, June 14, 2020> </h2>
+           <h2 id="date" Sunday, June 14, 2020> </h2>
      
         <div class="current-day">
             <div class="row">
@@ -50,7 +55,7 @@
 
                 <div class="col-6">
                        <img src="http://openweathermap.org/img/wn/10d@2x.png" 
-                            alt="icon" 
+                            alt="clear" 
                             id="icon">
                     <div id="temp-description"> 
                         Partly Cloudy 
