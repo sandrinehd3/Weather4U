@@ -1,95 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://kit.fontawesome.com/eed35ebf68.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chewy&family=Merienda+One&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-</head>
+    <script
+      src="https://kit.fontawesome.com/eed35ebf68.js"
+      crossorigin="anonymous"
+    ></script>
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Chewy&family=Merienda+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1> ☀️ WEATHER 4 U ☀️</h1>
-        <div class="city-form">
-            <form id="search-form">
-                <div class="row">
-                    <div class="col-7">
-                        <input  type="search" 
-                                id="search-text-input" 
-                                placeholder="Enter city" 
-                                class= "form-control"
-                                autocomplete="off"
-                                autofocus="on" />
-                    </div>            
-                        <div class="col-1">
-                        <input  id="search-button" 
-                                type="submit" 
-                                value="GO" />
-                        </div>
-                    <div class="col-4">
-                        <span class="units"> 
-                            <a href="#" id="celsius-link">°C</a> <span id="unit-divider">|</span> 
-                            <a href="#" id ="fahrenheit-link">°F</a>
-                        </span>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <br>
-        <div id="city"> Brooklyn </div>
-        
-        <h2 id="date" Sunday, June 14, 2020> </h2>
-     
-        <div class="current-day">           
-                    <div id="temperature"> <strong>70</strong><strong>°</strong></div>
-                        <img src="http://openweathermap.org/img/wn/10d@2x.png" 
-                            alt="clear" 
-                            id="icon">
-                    <div id="temp-description"> 
-                        Partly Cloudy 
-                    </div>
-                </div>
-          
-            <br>
-            <hr>
-
-            <div class="row">
-                <div class="col-4"> 
-                    HUMIDITY: 
-                    <span id="humidity"> <br/> 5% </span>
-                </div>
-                <div class="col-4"> 
-                    WINDSPEED: 
-                    <span id="windspeed"> <br> 36 mph</span>
-                </div>
-                <div class="col-4"> 
-                    PRESSURE: 
-                    <span id="pressure"> <br> 5 </span>
-                </div>
+      <h1>☀️ WEATHER 4 U ☀️</h1>
+      <div class="city-form">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-7">
+              <input
+                type="search"
+                id="search-text-input"
+                placeholder="Enter city"
+                class="form-control"
+                autocomplete="off"
+                autofocus="on"
+              />
             </div>
+            <div class="col-1">
+              <input id="search-button" type="submit" value="GO" />
+            </div>
+            <div class="col-4">
+              <span class="units">
+                <a href="#" id="celsius-link">°C</a>
+                <span id="unit-divider">|</span>
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <br />
+      <div id="city">Brooklyn</div>
 
-            <hr>
-            <table>
-                <tr>
-                    <th>MON <i class="fas fa-cloud-sun"></i> <br> 65° | 75° </th>
-                    <th>TUE<i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
-                    <th>WED <i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
-                    <th>THU <i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
-                    <th>FRI <i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
-                    <th>SAT <i class="fas fa-cloud-sun"></i> <br> 65° | 75°</th>
+      <h2 id="date" Sunday, June 14, 2020></h2>
+
+      <div class="current-day">
+        <div id="temperature"><strong>70</strong></div>
+
+        <br />
+        <img
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="clear"
+          id="icon"
+        />
+        <div id="temp-description">
+          Partly Cloudy
         </div>
+      </div>
 
-        </table>
-        <a href="https://github.com/sandrinehd3/Weather4U"> Open-source code</a> by Sandrine Holloway
+      <br />
+      <hr />
+
+      <div class="row">
+        <div class="col-4">
+          HUMIDITY:
+          <span id="humidity">
+            <br />
+            5%
+          </span>
+        </div>
+        <div class="col-4">
+          WINDSPEED:
+          <span id="windspeed">
+            <br />
+            36 mph</span
+          >
+        </div>
+        <div class="col-4">
+          PRESSURE:
+          <span id="pressure">
+            <br />
+            5
+          </span>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row weather-forecast" id="forecast"></div>
     </div>
     <script src="src/index.js"></script>
-</body>
-
+  </body>
+  <a href="https://github.com/sandrinehd3/Weather4U"> Open-source code</a>
+  by Sandrine Holloway
 </html>
