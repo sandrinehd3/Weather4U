@@ -75,6 +75,7 @@ function displayForecast(response) {
       <img
         src=http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png
         alt = ""
+        id = "forecast-icon"
       />
       <div class="forecast-temp"> 
         <strong>

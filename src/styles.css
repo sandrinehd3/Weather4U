@@ -4,10 +4,10 @@ body {
   margin-left: 30px;
   padding-left: 10px;
   padding-top: 40px;
-  max-width: 450px;
+  max-width: 500px;
 }
 .container {
-  width: 450px;
+  width: 500px;
   padding: 30px 20px;
   border: 2px solid green;
   border-width: 400;
@@ -25,6 +25,7 @@ input[type="text"] {
   position: relative;
   top: 25px;
   left: 200;
+  margin-left: 50px;
   background-color: blanchedalmond;
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -77,9 +78,7 @@ h2 {
   font-family: "Merienda One";
   font-size: 25px;
 }
-#icon {
-  text-align: center;
-}
+
 #temperature {
   text-align: center;
   font-size: 70px;
@@ -93,25 +92,17 @@ h2 {
   text-transform: capitalize;
   margin-top: 20px;
 }
-#hightemp,
-#lowtemp,
-#high-temp-label,
-#low-temp-label,
-#low-high-divider {
-  font-family: "Merienda One";
-  color: #f4f6ff;
-  font-size: 20px;
-}
 
 img {
-  width: 75px;
-  height: 50px;
-  background-color: #f4f6ff;
-  padding: 5px 5px;
-  margin: 5px 5px;
-  border-radius: 5px;
+  margin: 0 auto;
+  display: block;
+  font-size: 2em;
+  text-align: center;
 }
 
+#forecast-icon {
+  font-size: x-small;
+}
 #humidity,
 #windspeed,
 #pressure {
@@ -125,20 +116,4 @@ img {
   text-align: center;
   font-style: bolder;
   font-size: 15px;
-}
-table {
-  width: 425px;
-  color: #f4f6ff;
-  font-size: 12px;
-  text-align: left;
-  margin-bottom: 30px;
-}
-th {
-  height: 30px;
-  width: 5px;
-  text-align: center;
-}
-td {
-  height: 4px;
-  vertical-align: bottom;
 }
