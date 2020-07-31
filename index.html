@@ -20,7 +20,7 @@
         <div class="city-form">
             <form id="search-form">
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-7">
                         <input  type="search" 
                                 id="search-text-input" 
                                 placeholder="Enter city" 
@@ -28,21 +28,22 @@
                                 autocomplete="off"
                                 autofocus="on" />
                     </div>            
-                        <div class="col-4">
+                        <div class="col-1">
                         <input  id="search-button" 
                                 type="submit" 
-                                value="Search" />
+                                value="GO" />
+                        </div>
+                    <div class="col-4">
+                        <span class="units"> 
+                        °C | 
+                        <a href="#" id ="fahrenheit-link">
+                        °F</a>
+                        </span>
                     </div>
                 </div>
             </form>
-            <div class="col-1">
-                <button id=celcius-button><strong>°C</strong></button>
-            </div>
-            <div class="col-1">
-                <button id=fahrenheit-button><strong>°F</strong></button>
-            </div>
-           
         </div>
+        <br>
         <div id="city"> Brooklyn </div>
 
       
