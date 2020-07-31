@@ -27,8 +27,9 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#temp-description");
   let highElement = document.querySelector("#hightemp");
   let lowElement = document.querySelector("#lowtemp");
-  let sunriseElement = document.querySelector("#sunrise");
-  let sunsetElement = document.querySelector("#sunset");
+  let humidityElement = document.querySelector("#humidity");
+  let windspeedElement = document.querySelector("#windspeed");
+  let pressureElement = document.querySelector("#pressure");
   let iconElement = document.querySelector("#icon");
   let dateElement = document.querySelector("#date");
 
@@ -37,8 +38,9 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   highElement.innerHTML = Math.round(response.data.main.temp_max);
   lowElement.innerHTML = Math.round(response.data.main.temp_min);
-  sunriseElement.innerHTML = response.data.sys.sunrise;
-  sunsetElement.innerHTML = response.data.sys.sunset;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windspeedElement.innerHTML = Math.round(response.data.wind.speed);
+  pressureElement.innerHTML = response.data.main.pressure;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

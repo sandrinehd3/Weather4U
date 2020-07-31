@@ -127,6 +127,11 @@ img {
   top: 0px;
   left: 0px;
 }
+#humidity,
+#windspeed,
+#pressure {
+  color: #f4f6ff;
+}
 .fas {
   size: 40px;
   color: #dfbf31;
