@@ -41,8 +41,12 @@ input[type="text"] {
   border-color: #ffbd69;
 }
 
-#celcius-link,
+#celsius-link,
 #fahrenheit-link {
+  font-size: 30px;
+  color: blanchedalmond;
+}
+#unit-divider {
   font-size: 30px;
 }
 #city {
@@ -75,16 +79,14 @@ h2 {
 }
 #icon {
   text-align: center;
-  margin-left: 10px;
-  margin-top: 30px;
-  margin-right: 25px;
-  font-size: 70px;
 }
 #temperature {
   text-align: center;
   font-size: 70px;
+  font-family: "Merienda One";
 }
 #temp-description {
+  text-align: center;
   font-family: "Merienda One";
   color: #f4f6ff;
   font-size: 20px;
