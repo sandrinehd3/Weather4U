@@ -1,45 +1,25 @@
-let now = new Date();
-let h2 = document.querySelector("h2");
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let day = days[now.getDay()];
-let month = months[now.getMonth()];
-let date = now.getDate();
-let year = now.getFullYear();
-let hour = now.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day}, ${hour}:${minutes}`;
 }
-
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
-h2.innerHTML = `${day},  ${month} ${date}, ${year}  <br> ${hour}:${minutes}`;
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -50,6 +30,7 @@ function displayTemperature(response) {
   let sunriseElement = document.querySelector("#sunrise");
   let sunsetElement = document.querySelector("#sunset");
   let iconElement = document.querySelector("#icon");
+  let dateElement = document.querySelector("#date");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -62,6 +43,7 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function search(city) {
@@ -76,7 +58,7 @@ function handleInput(event) {
   search(cityInputElement.value);
 }
 
-search("lisbon");
+search("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleInput);
